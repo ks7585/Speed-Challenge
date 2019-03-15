@@ -43,7 +43,7 @@ def train_generator(path,speed):
             #plt.show()
             image_batch[i]= concat_image
             label_batch[i]= concat_speed
-        yield shuffle(image_batch, label_batch)
+        yield shuffle(image_batch/255., label_batch)
 
 def flowNet():
 
